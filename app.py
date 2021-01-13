@@ -4,6 +4,9 @@ from flask import Flask, render_template
 # core import
 from core.AppCore import AppCore
 
+# keys import 
+from core.constants import KeysApi
+
 app = Flask(__name__)
 
 # Make the WSGI interface available at the top level so wfastcgi can get it.
@@ -12,7 +15,7 @@ wsgi_app = app.wsgi_app
 @app.route('/')
 def hello():
     """Renders a sample page."""
-    AppCore.TestRequest()
+    AppCore.RequestFreeCompanyData(KeysApi.LODESTONE_ID_CL)
     return render_template('index.html')
 
 if __name__ == '__main__':
