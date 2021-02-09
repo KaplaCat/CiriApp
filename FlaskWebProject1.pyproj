@@ -31,6 +31,21 @@
     <Compile Include="core\api\Connecter.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="core\api\factories\FactoryFreeCompany.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="core\api\models\Estate.py" />
+    <Compile Include="core\api\models\Focus.py" />
+    <Compile Include="core\api\models\FreeCompany.py" />
+    <Compile Include="core\api\models\Ranking.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="core\api\models\Reputation.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="core\api\models\Seeking.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="core\api\UrlBuilder.py">
       <SubType>Code</SubType>
     </Compile>
@@ -41,6 +56,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="core\constants\KeysApi.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="core\constants\KeysJson.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="core\logger\EnuLogLevel.py">
@@ -66,6 +84,8 @@
   <ItemGroup>
     <Folder Include="core\" />
     <Folder Include="core\api\" />
+    <Folder Include="core\api\models\" />
+    <Folder Include="core\api\factories\" />
     <Folder Include="core\logger\" />
     <Folder Include="core\constants\" />
     <Folder Include="core\tools\" />

@@ -5,7 +5,7 @@ from flask import Flask, render_template
 from core.AppCore import AppCore
 
 # keys import 
-from core.constants import KeysApi
+from core.constants.KeysApi import KeysApi
 
 app = Flask(__name__)
 

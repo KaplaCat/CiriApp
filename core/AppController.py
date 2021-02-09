@@ -11,4 +11,7 @@ class AppController(metaclass=SingletonMeta):
     # Logger to Degug app
     logger = Logger()
 
+    ## Data from API
+    FreeCompany = -1
+
 

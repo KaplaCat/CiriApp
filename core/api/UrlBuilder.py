@@ -1,5 +1,5 @@
 from core.tools.SingletonMeta import SingletonMeta
-from core.constants import KeysApi
+from core.constants.KeysApi import KeysApi
 
 class UrlBuilder(metaclass=SingletonMeta):
     """description of class"""
