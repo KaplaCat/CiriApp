@@ -2,6 +2,7 @@ from .Estate import Estate
 from .Ranking import Ranking
 from .Reputation import Reputation
 from .Seeking import Seeking
+from .FreeCompanyMembers import FreeCompanyMembers
 
 class FreeCompany:
 	Active = ""
@@ -23,4 +24,4 @@ class FreeCompany:
 	Server = ""
 	Slogan = ""
 	Tag = ""
-
+	FreeCompanyMembers = -1

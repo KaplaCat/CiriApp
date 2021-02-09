@@ -7,6 +7,7 @@ from core.api.models.Focus import Focus
 from core.api.models.Ranking import Ranking
 from core.api.models.Reputation import Reputation
 from core.api.models.Seeking import Seeking
+from core.api.models.FreeCompanyMembers import FreeCompanyMembers
 ## keys
 from core.constants.KeysJson import KeysJson
 
@@ -18,7 +19,9 @@ class FactoryFreeCompany(metaclass=SingletonMeta):
         Set data to free company object
         """
         freeCompany = FreeCompany()
+        dataMembers =  data[KeysJson.FreeCompanyMembers]
         data = data[KeysJson.FreeCompany]
+        
         freeCompany.Active = data[KeysJson.Active]
         freeCompany.ActiveMemberCount = data[KeysJson.ActiveMemberCount]
         freeCompany.Crest = data[KeysJson.Crest]
@@ -74,6 +77,21 @@ class FactoryFreeCompany(metaclass=SingletonMeta):
         freeCompany.Server = data[KeysJson.Server]
         freeCompany.Slogan = data[KeysJson.Slogan]
         freeCompany.Tag = data[KeysJson.Tag]
+
+        freeCompanyMembers = []
+        for temp in dataMembers:
+            model = FreeCompanyMembers()
+            model.Avatar = temp[KeysJson.Avatar]
+            model.FeastMatches = temp[KeysJson.FeastMatches]
+            model.ID = temp[KeysJson.ID]
+            model.Lang = temp[KeysJson.Lang]
+            model.Name = temp[KeysJson.Name]
+            model.Rank = temp[KeysJson.Rank]
+            model.RankIcon = temp[KeysJson.RankIcon]
+            model.Server = temp[KeysJson.Server]
+            freeCompanyMembers.append(model)
+        freeCompany = freeCompanyMembers
+
         return freeCompany
 
 

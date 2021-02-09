@@ -37,6 +37,9 @@
     <Compile Include="core\api\models\Estate.py" />
     <Compile Include="core\api\models\Focus.py" />
     <Compile Include="core\api\models\FreeCompany.py" />
+    <Compile Include="core\api\models\FreeCompanyMembers.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="core\api\models\Ranking.py">
       <SubType>Code</SubType>
     </Compile>

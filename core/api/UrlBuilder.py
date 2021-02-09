@@ -5,6 +5,6 @@ class UrlBuilder(metaclass=SingletonMeta):
     """description of class"""
     
     def getFreeCompanyRequest(id):
-        return "https://xivapi.com/freecompany/"+ KeysApi.LODESTONE_ID_CL
+        return "https://xivapi.com/freecompany/"+ KeysApi.LODESTONE_ID_CL + "?data=FCM"
 
 
