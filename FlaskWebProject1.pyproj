@@ -67,6 +67,9 @@
     <Compile Include="core\AppCore.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="core\constants\IdHtml.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="core\constants\KeysApi.py">
       <SubType>Code</SubType>
     </Compile>

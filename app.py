@@ -13,10 +13,10 @@ app = Flask(__name__)
 wsgi_app = app.wsgi_app
 
 @app.route('/')
-def hello():
+def index():
     """Renders a sample page."""
     AppCore.RequestAchievementsDetail("1")
-    return render_template('index.html')
+    return render_template('index.html', fc_name='ETHER')
 
 if __name__ == '__main__':
     import os
