@@ -96,6 +96,9 @@
     <Content Include="requirements.txt" />
     <Content Include="static\bootstrap\css\bootstrap.min.css" />
     <Content Include="static\bootstrap\js\bootstrap.min.js" />
+    <Content Include="static\css\Header-Dark.css" />
+    <Content Include="static\css\Login-Form-Dark.css" />
+    <Content Include="static\css\styles.css" />
     <Content Include="static\fonts\font-awesome.min.css" />
     <Content Include="static\fonts\fontawesome-webfont.eot" />
     <Content Include="static\fonts\fontawesome-webfont.svg" />
@@ -108,10 +111,11 @@
     <Content Include="static\fonts\ionicons.svg" />
     <Content Include="static\fonts\ionicons.ttf" />
     <Content Include="static\fonts\ionicons.woff" />
-    <Content Include="static\js\Chart.js" />
+    <Content Include="static\img\mountain_bg.jpg" />
+    <Content Include="static\img\star-sky.jpg" />
     <Content Include="static\js\jquery.min.js" />
-    <Content Include="static\js\package-lock.json" />
     <Content Include="templates\index.html" />
+    <Content Include="templates\login.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="core\" />

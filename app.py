@@ -1,5 +1,5 @@
 # System import
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for, request
 
 # core import
 from core.AppCore import AppCore
@@ -17,6 +17,13 @@ def index():
     """Renders a sample page."""
     AppCore.RequestAchievementsDetail("1")
     return render_template('index.html', fc_name='ETHER')
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if(request.method == 'POST'):
+        print(request.form)
+        return redirect(url_for('index'))
+    return render_template('login.html')
 
 if __name__ == '__main__':
     import os
