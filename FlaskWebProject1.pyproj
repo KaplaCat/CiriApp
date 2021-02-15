@@ -91,6 +91,9 @@
     <Compile Include="core\tools\SingletonMeta.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="database\DatabaseController.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
@@ -125,6 +128,8 @@
     <Folder Include="core\logger\" />
     <Folder Include="core\constants\" />
     <Folder Include="core\tools\" />
+    <Folder Include="database\" />
+    <Folder Include="database\data\" />
     <Folder Include="static\" />
     <Folder Include="static\bootstrap\" />
     <Folder Include="static\bootstrap\css\" />

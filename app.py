@@ -3,6 +3,7 @@ from flask import Flask, render_template, redirect, url_for, request
 
 # core import
 from core.AppCore import AppCore
+from database.DatabaseController import DatabaseController
 
 # keys import 
 from core.constants.KeysApi import KeysApi
@@ -15,7 +16,8 @@ wsgi_app = app.wsgi_app
 @app.route('/')
 def index():
     """Renders a sample page."""
-    AppCore.RequestAchievementsDetail("1")
+    #AppCore.RequestAchievementsDetail("1")
+    DatabaseController.importDb()
     return render_template('index.html', fc_name='ETHER')
 
 @app.route('/login', methods=['GET', 'POST'])
