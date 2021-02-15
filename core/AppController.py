@@ -13,5 +13,7 @@ class AppController(metaclass=SingletonMeta):
 
     ## Data from API
     FreeCompany = -1
+    MemberAchievements = -1
+    AchievementsDetail = -1
 
 

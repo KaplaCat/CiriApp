@@ -15,7 +15,7 @@ wsgi_app = app.wsgi_app
 @app.route('/')
 def hello():
     """Renders a sample page."""
-    AppCore.RequestFreeCompanyData(KeysApi.LODESTONE_ID_CL)
+    AppCore.RequestAchievementsDetail("1")
     return render_template('index.html')
 
 if __name__ == '__main__':
