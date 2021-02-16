@@ -19,7 +19,11 @@ class AppCore(metaclass=SingletonMeta):
 
     def RequestFreeCompanyData(id):
         AppController.logger.add(LogItem("[RequestApi][FC][ENTER]"))
-        data = AppController.connecter.Request(UrlBuilder.getFreeCompanyRequest(id))
+        if(AppController.database.isFreeCompanyTable() == False):
+            data = AppController.connecter.Request(UrlBuilder.getFreeCompanyRequest(id))
+            AppController.database.addDataFreeCompany(data)
+        else:
+            data = AppController.database.getDataFreeCompany()
         AppController.FreeCompany = FactoryFreeCompany.setData(data)
         AppController.logger.add(LogItem("[RequestApi][FC][LEAVE]"))
         

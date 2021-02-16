@@ -16,8 +16,7 @@ wsgi_app = app.wsgi_app
 @app.route('/')
 def index():
     """Renders a sample page."""
-    #AppCore.RequestAchievementsDetail("1")
-    DatabaseController.importDb()
+    AppCore.RequestFreeCompanyData(KeysApi.LODESTONE_ID_CL)
     return render_template('index.html', fc_name='ETHER')
 
 @app.route('/login', methods=['GET', 'POST'])

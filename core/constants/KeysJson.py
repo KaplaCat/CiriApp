@@ -2,6 +2,8 @@ from core.tools.SingletonMeta import SingletonMeta
 
 class KeysJson(metaclass=SingletonMeta):
     """description of class"""
+    _default = "_default"
+
     FreeCompany = "FreeCompany"
     Active = "Active"
     ActiveMemberCount = "ActiveMemberCount"

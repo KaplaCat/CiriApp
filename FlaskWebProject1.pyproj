@@ -67,9 +67,6 @@
     <Compile Include="core\AppCore.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="core\constants\IdHtml.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="core\constants\KeysApi.py">
       <SubType>Code</SubType>
     </Compile>
@@ -96,6 +93,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="database\data\db.json" />
     <Content Include="requirements.txt" />
     <Content Include="static\bootstrap\css\bootstrap.min.css" />
     <Content Include="static\bootstrap\js\bootstrap.min.js" />
