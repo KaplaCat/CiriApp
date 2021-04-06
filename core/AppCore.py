@@ -5,6 +5,7 @@ from core.api.UrlBuilder import UrlBuilder
 from core.tools.SingletonMeta import SingletonMeta
 ## Factories for data
 from core.api.factories.FactoryFreeCompany import FactoryFreeCompany
+from core.api.factories.FactoryMemberAchievements import FactoryMemberAchievements
 
 from core.AppController import AppController
 
@@ -18,9 +19,24 @@ class AppCore(metaclass=SingletonMeta):
 
     def RequestFreeCompanyData(id):
         AppController.logger.add(LogItem("[RequestApi][FC][ENTER]"))
-        data = AppController.connecter.Request(UrlBuilder.getFreeCompanyRequest(id))
+        if(AppController.database.isFreeCompanyTable() == False):
+            data = AppController.connecter.Request(UrlBuilder.getFreeCompanyRequest(id))
+            AppController.database.addDataFreeCompany(data)
+        else:
+            data = AppController.database.getDataFreeCompany()
         AppController.FreeCompany = FactoryFreeCompany.setData(data)
-        AppController.logger.add(LogItem("[RequestApi][FC][DATA] - " + str(data)))
         AppController.logger.add(LogItem("[RequestApi][FC][LEAVE]"))
+        
+    def RequestAchievementsMember(id):
+        AppController.logger.add(LogItem("[RequestApi][AC][ENTER]"))
+        data = AppController.connecter.Request(UrlBuilder.getAchievementsMemberRequest(id))
+        AppController.MemberAchievements = FactoryMemberAchievements.setData(data)
+        AppController.logger.add(LogItem("[RequestApi][AC][LEAVE]"))
+
+    def RequestAchievementsDetail(id):
+        AppController.logger.add(LogItem("[RequestApi][ACD][ENTER]"))
+        data = AppController.connecter.Request(UrlBuilder.getRequestAchievementsDetail(id))
+        AppController.AchievementsDetail = FactoryMemberAchievements.setDataDetails(data)
+        AppController.logger.add(LogItem("[RequestApi][ACD][LEAVE]"))
 
 

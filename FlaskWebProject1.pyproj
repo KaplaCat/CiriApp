@@ -34,6 +34,15 @@
     <Compile Include="core\api\factories\FactoryFreeCompany.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="core\api\factories\FactoryMemberAchievements.py" />
+    <Compile Include="core\api\models\Achievement.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="core\api\models\AchievementCategory.py" />
+    <Compile Include="core\api\models\Achievements.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="core\api\models\AchievementsDetails.py" />
     <Compile Include="core\api\models\Estate.py" />
     <Compile Include="core\api\models\Focus.py" />
     <Compile Include="core\api\models\FreeCompany.py" />
@@ -79,10 +88,35 @@
     <Compile Include="core\tools\SingletonMeta.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="database\DatabaseController.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="database\data\db.json" />
     <Content Include="requirements.txt" />
+    <Content Include="static\bootstrap\css\bootstrap.min.css" />
+    <Content Include="static\bootstrap\js\bootstrap.min.js" />
+    <Content Include="static\css\Header-Dark.css" />
+    <Content Include="static\css\Login-Form-Dark.css" />
+    <Content Include="static\css\styles.css" />
+    <Content Include="static\fonts\font-awesome.min.css" />
+    <Content Include="static\fonts\fontawesome-webfont.eot" />
+    <Content Include="static\fonts\fontawesome-webfont.svg" />
+    <Content Include="static\fonts\fontawesome-webfont.ttf" />
+    <Content Include="static\fonts\fontawesome-webfont.woff" />
+    <Content Include="static\fonts\fontawesome-webfont.woff2" />
+    <Content Include="static\fonts\FontAwesome.otf" />
+    <Content Include="static\fonts\ionicons.eot" />
+    <Content Include="static\fonts\ionicons.min.css" />
+    <Content Include="static\fonts\ionicons.svg" />
+    <Content Include="static\fonts\ionicons.ttf" />
+    <Content Include="static\fonts\ionicons.woff" />
+    <Content Include="static\img\mountain_bg.jpg" />
+    <Content Include="static\img\star-sky.jpg" />
+    <Content Include="static\js\jquery.min.js" />
     <Content Include="templates\index.html" />
+    <Content Include="templates\login.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="core\" />
@@ -92,6 +126,16 @@
     <Folder Include="core\logger\" />
     <Folder Include="core\constants\" />
     <Folder Include="core\tools\" />
+    <Folder Include="database\" />
+    <Folder Include="database\data\" />
+    <Folder Include="static\" />
+    <Folder Include="static\bootstrap\" />
+    <Folder Include="static\bootstrap\css\" />
+    <Folder Include="static\bootstrap\js\" />
+    <Folder Include="static\css\" />
+    <Folder Include="static\fonts\" />
+    <Folder Include="static\img\" />
+    <Folder Include="static\js\" />
     <Folder Include="templates\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />

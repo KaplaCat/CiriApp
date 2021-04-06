@@ -6,5 +6,11 @@ class UrlBuilder(metaclass=SingletonMeta):
     
     def getFreeCompanyRequest(id):
         return "https://xivapi.com/freecompany/"+ KeysApi.LODESTONE_ID_CL + "?data=FCM"
+    
+    def getAchievementsMemberRequest(id):
+        return "https://xivapi.com/character/" + id + "?data=AC"
+
+    def getRequestAchievementsDetail(id):
+        return "https://xivapi.com/achievement/" + id
 
 

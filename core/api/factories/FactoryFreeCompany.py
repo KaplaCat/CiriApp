@@ -90,7 +90,7 @@ class FactoryFreeCompany(metaclass=SingletonMeta):
             model.RankIcon = temp[KeysJson.RankIcon]
             model.Server = temp[KeysJson.Server]
             freeCompanyMembers.append(model)
-        freeCompany = freeCompanyMembers
+        freeCompany.FreeCompanyMembers = freeCompanyMembers
 
         return freeCompany
 
